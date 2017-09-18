@@ -4,12 +4,12 @@ import {HumanStandardToken} from './HumanStandardToken.sol';
 
 /*
     Two phase auction:
-    1. deposit phase
-    - begins when contract is deployed, ends when process bid phase begins
+    1. purchase phase
+    - begins when contract is deployed, ends when processing phase begins
     - initial and incremental deposits must be equal or greater than the minimum deposit defined at contract deployment
     - buyers submit deposits on-chain
     - buyers submit signed bids off-chain (a total bid amount in WEI and a max price per token)
-    2. process bid phase
+    2. processing phase
     - ends when auction ends
     - strike price must be set before off-chain signed bids can be processed
     - when all bids have been processed, owner can call completeSuccessfulAuction to end auction
@@ -85,7 +85,7 @@ contract Auction {
     uint public maxTokensForSale;
 
     // AUCTION PHASES
-    uint public depositWindowInBlocks;
+    uint public purchaseWindowInBlocks;
     uint public processingWindowInBlocks;
 
     // OTHER AUCTION CONSTRAINTS
@@ -107,6 +107,7 @@ contract Auction {
         uint totalTokens;   // total amount of tokens to distribute to buyer
         bool hasWithdrawn;  // bool to check if buyer has withdrawn
     }
+
     mapping(address => Buyer) public allBuyers; // mapping of address to buyer (Buyer struct)
     uint public totalTokensSold; // running total of tokens from processed bids
     uint public totalWeiRaised; // running total of WEI raised from processed bids
@@ -118,7 +119,7 @@ contract Auction {
     /********
     MODIFIERS
     *********/
-    modifier in_buy_phase {
+    modifier in_purchase_phase {
         require(auctionFail == false);
         require(block.number < processingPhaseStartBlock);
         _;
@@ -179,9 +180,9 @@ contract Auction {
         _maxTokenBonusPercentage : maximum token percentage bonus that can be applied when processing bids
     ******************************************************************************************************/
     function Auction(
-        uint _tokenSupply, string _tokenName, uint8 _tokenDecimals, string _tokenSymbol, address _weiWallet, address _tokenWallet, uint _minDepositInWei, uint _minWeiToRaise, uint _maxWeiToRaise, uint _minTokensForSale, uint _maxTokensForSale, uint _maxTokenBonusPercentage, uint _depositWindowInBlocks, uint _processingWindowInBlocks) {
+        uint _tokenSupply, string _tokenName, uint8 _tokenDecimals, string _tokenSymbol, address _weiWallet, address _tokenWallet, uint _minDepositInWei, uint _minWeiToRaise, uint _maxWeiToRaise, uint _minTokensForSale, uint _maxTokensForSale, uint _maxTokenBonusPercentage, uint _purchaseWindowInBlocks, uint _processingWindowInBlocks) {
 
-        require(0 < _depositWindowInBlocks);
+        require(0 < _purchaseWindowInBlocks);
         require(0 < _processingWindowInBlocks);
         require(0 < _minDepositInWei);
         require(_minDepositInWei <= _minWeiToRaise);
@@ -206,7 +207,7 @@ contract Auction {
         maxTokensForSale = _maxTokensForSale;
         maxTokenBonusPercentage = _maxTokenBonusPercentage;
 
-        depositWindowInBlocks = _depositWindowInBlocks;
+        purchaseWindowInBlocks = _purchaseWindowInBlocks;
         processingWindowInBlocks = _processingWindowInBlocks;
 
         token = new HumanStandardToken(tokenSupply, tokenName, tokenDecimals, tokenSymbol);
@@ -225,7 +226,7 @@ contract Auction {
     }
 
     // buyers can deposit as many time as they want during the deposit phase
-    function deposit() not_in_emergency in_buy_phase payable {
+    function deposit() not_in_emergency in_purchase_phase payable {
         require(minDepositInWei <= msg.value);
         Buyer storage buyer = allBuyers[msg.sender];
 		buyer.depositInWei = SafeMath.add(buyer.depositInWei, msg.value);
@@ -261,7 +262,7 @@ contract Auction {
     function startAuction() not_in_emergency owner_only {
         require(auctionStarted == false && auctionFail == false);
         auctionStarted = true;
-        processingPhaseStartBlock = block.number + depositWindowInBlocks;
+        processingPhaseStartBlock = block.number + purchaseWindowInBlocks;
         auctionEndBlock = processingPhaseStartBlock + processingWindowInBlocks;
         StartAuctionEvent(block.number, this, token);
     }
