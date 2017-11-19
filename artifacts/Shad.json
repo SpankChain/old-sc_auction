@@ -1,0 +1,80 @@
+{
+  "contract_name": "Shad",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "addr",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "tokenBidPriceInWei",
+          "type": "uint256"
+        },
+        {
+          "name": "bidWeiAmount",
+          "type": "uint256"
+        },
+        {
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "process",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "sha",
+          "type": "address"
+        }
+      ],
+      "name": "ShadEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "shad",
+          "type": "address"
+        }
+      ],
+      "name": "DeployEvent",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b7f68f6a0f063c25c6678c443b9a484086f15ba8f91f60218695d32a5251f2050eb30604051600160a060020a03909116815260200160405180910390a15b5b6102398061005e6000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663767800de8114610048578063d5ae23a414610084575b600080fd5b341561005357600080fd5b61005b6100ab565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b341561008f57600080fd5b6100a960043560243560ff604435166064356084356100c7565b005b60005473ffffffffffffffffffffffffffffffffffffffff1681565b600030868660405173ffffffffffffffffffffffffffffffffffffffff939093166c0100000000000000000000000002835260148301919091526034820152605401604051809103902090506001818585856040516000815260200160405260006040516020015260405193845260ff90921660208085019190915260408085019290925260608401929092526080909201915160208103908084039060008661646e5a03f1151561017857600080fd5b5050602060405103516000805473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff92831617908190557f486baa3ae644ad870445c8d246b3578ee82cc14cd1722298bc95cfe54c90ac58911660405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390a15b5050505050505600a165627a7a7230582010cc956a824062b6805cbd62481b40e3d3c75d6195900f6b48320b75f8be17420029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1507698098254
+}

@@ -1,0 +1,3209 @@
+{
+  "contract_name": "Contract",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "auctionEndBlock",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ownerHasWithdrawn",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "processingWindowInBlocks",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "weiWallet",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "tokenBidPriceInWei",
+          "type": "uint256"
+        },
+        {
+          "name": "bidWeiAmount",
+          "type": "uint256"
+        },
+        {
+          "name": "tokenBonusPercentage",
+          "type": "uint256"
+        },
+        {
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "processBid",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "ownerWithdraw",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "strikePriceInWei",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "minTokensForSale",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalWeiRaised",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalTokensSold",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "startAuction",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "allBuyers",
+      "outputs": [
+        {
+          "name": "depositInWei",
+          "type": "uint256"
+        },
+        {
+          "name": "bidWeiAmount",
+          "type": "uint256"
+        },
+        {
+          "name": "totalTokens",
+          "type": "uint256"
+        },
+        {
+          "name": "hasWithdrawn",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "minWeiToRaise",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ownerAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "cancelAuction",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "maxTokensForSale",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "completeSuccessfulAuction",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "depositWindowInBlocks",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "processingPhaseStartBlock",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenWallet",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "maxTokenBonusPercentage",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "maxWeiToRaise",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_strikePriceInWei",
+          "type": "uint256"
+        }
+      ],
+      "name": "setStrikePrice",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "minDepositInWei",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "currentAuctionState",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "returnTokens",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_tokenAddress",
+          "type": "address"
+        },
+        {
+          "name": "_weiWallet",
+          "type": "address"
+        },
+        {
+          "name": "_tokenWallet",
+          "type": "address"
+        },
+        {
+          "name": "_minDepositInWei",
+          "type": "uint256"
+        },
+        {
+          "name": "_minWeiToRaise",
+          "type": "uint256"
+        },
+        {
+          "name": "_maxWeiToRaise",
+          "type": "uint256"
+        },
+        {
+          "name": "_minTokensForSale",
+          "type": "uint256"
+        },
+        {
+          "name": "_maxTokensForSale",
+          "type": "uint256"
+        },
+        {
+          "name": "_maxTokenBonusPercentage",
+          "type": "uint256"
+        },
+        {
+          "name": "_depositWindowInBlocks",
+          "type": "uint256"
+        },
+        {
+          "name": "_processingWindowInBlocks",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "blockNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "contractAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "tokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "StartAuctionEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "blockNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "buyerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "depositInWei",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "totalDepositInWei",
+          "type": "uint256"
+        }
+      ],
+      "name": "DepositEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "blockNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "strikePriceInWei",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetStrikePriceEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "blockNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "buyerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "tokensPurchased",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "purchaseAmountInWei",
+          "type": "uint256"
+        }
+      ],
+      "name": "ProcessBidEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "blockNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "strikePriceInWei",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "totalTokensSold",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "totalWeiRaised",
+          "type": "uint256"
+        }
+      ],
+      "name": "AuctionSuccessEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "blockNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "buyerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "tokensReceived",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "unspentDepositInWei",
+          "type": "uint256"
+        }
+      ],
+      "name": "WithdrawEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "blockNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "totalWeiRaised",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "totalRemainingTokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "OwnerWithdrawEvent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "CancelAuctionEvent",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052601080546000919060a060020a60ff02191674010000000000000000000000000000000000000000835b0217905550341561003e57600080fd5b6040516101608061181d83398101604052808051919060200180519190602001805191906020018051919060200180519190602001805191906020018051919060200180519190602001805191906020018051919060200180519150505b60008890106100aa57600080fd5b868811156100b757600080fd5b8587106100c357600080fd5b60008590106100d157600080fd5b8385106100dd57600080fd5b60008290106100eb57600080fd5b60008190106100f957600080fd5b60008054600160a060020a03338116600160a060020a031992831617909255600380548e8416908316179055600180548d841690831617905560028054928c1692909116919091179055600e889055600787905560088690556009859055600a849055600d839055600b829055600c8190555b50505050505050505050505b611696806101876000396000f3006060604052361561016f5763ffffffff60e060020a60003504166307d52fa881146101745780631bf822e51461019957806320869f85146101c0578063270df9b5146101e557806333c50420146102145780633ccfd60b1461023e5780634311de8f146102535780634ae26eb314610268578063517125fa1461028d57806353f4db01146102b257806363b20117146102d75780636b64c769146102fc5780637824407f146103115780638038b999146103365780638581e4ca146103815780638f84aa09146103a65780638fa8b790146103d557806397f2f5c3146103ea5780639cc5b2b71461040f5780639d76ea5814610424578063a5c8362214610453578063aab6430514610478578063bff99c6c1461049d578063d0576231146104cc578063d0e30db0146104f1578063d5435a82146104fb578063e488cd9f14610520578063e797ac8714610538578063f94311101461055d578063f9718fc814610594578063fc0c546a146105a9575b600080fd5b341561017f57600080fd5b6101876105d8565b60405190815260200160405180910390f35b34156101a457600080fd5b6101ac6105de565b604051901515815260200160405180910390f35b34156101cb57600080fd5b6101876105e7565b60405190815260200160405180910390f35b34156101f057600080fd5b6101f86105ed565b604051600160a060020a03909116815260200160405180910390f35b341561021f57600080fd5b61023c60043560243560443560ff6064351660843560a4356105fc565b005b341561024957600080fd5b61023c6108a8565b005b341561025e57600080fd5b61023c610b39565b005b341561027357600080fd5b610187610df1565b60405190815260200160405180910390f35b341561029857600080fd5b610187610df7565b60405190815260200160405180910390f35b34156102bd57600080fd5b610187610dfd565b60405190815260200160405180910390f35b34156102e257600080fd5b610187610e03565b60405190815260200160405180910390f35b341561030757600080fd5b61023c610e09565b005b341561031c57600080fd5b610187611054565b60405190815260200160405180910390f35b341561034157600080fd5b610355600160a060020a036004351661105a565b604051938452602084019290925260408084019190915290151560608301526080909101905180910390f35b341561038c57600080fd5b610187611084565b60405190815260200160405180910390f35b34156103b157600080fd5b6101f861108a565b604051600160a060020a03909116815260200160405180910390f35b34156103e057600080fd5b61023c611099565b005b34156103f557600080fd5b61018761113c565b60405190815260200160405180910390f35b341561041a57600080fd5b61023c611142565b005b341561042f57600080fd5b6101f86112ff565b604051600160a060020a03909116815260200160405180910390f35b341561045e57600080fd5b61018761130e565b60405190815260200160405180910390f35b341561048357600080fd5b610187611314565b60405190815260200160405180910390f35b34156104a857600080fd5b6101f861131a565b604051600160a060020a03909116815260200160405180910390f35b34156104d757600080fd5b610187611329565b60405190815260200160405180910390f35b61023c61132f565b005b341561050657600080fd5b6101876113f5565b60405190815260200160405180910390f35b341561052b57600080fd5b61023c6004356113fb565b005b341561054357600080fd5b6101876114b9565b60405190815260200160405180910390f35b341561056857600080fd5b6105706114bf565b6040518082600381111561058057fe5b60ff16815260200191505060405180910390f35b341561059f57600080fd5b61023c6114cf565b005b34156105b457600080fd5b6101f86115df565b604051600160a060020a03909116815260200160405180910390f35b60065481565b60145460ff1681565b600c5481565b600154600160a060020a031681565b600080600080600080600f54600010151561061657600080fd5b60015b60105460a060020a900460ff16600381111561063157fe5b1461063b57600080fd5b6005544390111561064b57600080fd5b600654431061065957600080fd5b60005433600160a060020a0390811691161461067457600080fd5b600e548b90111561068457600080fd5b600f548c90111561069457600080fd5b8a8c11156106a157600080fd5b60008a9011156106b057600080fd5b600d548a11156106bf57600080fd5b308c8c604051600160a060020a03939093166c0100000000000000000000000002835260148301919091526034820152605401604051809103902095506001868a8a8a6040516000815260200160405260006040516020015260405193845260ff90921660208085019190915260408085019290925260608401929092526080909201915160208103908084039060008661646e5a03f1151561076157600080fd5b50506020604051035194506107788b600f546115ee565b935061078e6107878b8661160a565b60646115ee565b925061079a8484611639565b9150600a546107ab83601254611639565b11156107b657600080fd5b6008546107c56013548d611639565b11156107d057600080fd5b50600160a060020a038416600090815260116020526040902080548b11156107f757600080fd5b60018101541561080657600080fd5b60028101829055600181018b9055601254610822908390611639565b60125560018101546013546108379190611639565b60138190555084600160a060020a03167ff9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c438360020154846001015460405180848152602001838152602001828152602001935050505060405180910390a25b5b5b5b505050505050505050505050565b6000436006541115806108d3575060025b60105460a060020a900460ff1660038111156108d157fe5b145b806108f6575060035b60105460a060020a900460ff1660038111156108f457fe5b145b151561090157600080fd5b50600160a060020a0333166000908152601160205260409020600381015460ff161561092c57600080fd5b60038101805460ff191660011790558054600e54111561094b57600080fd5b60025b60105460a060020a900460ff16600381111561096657fe5b1415610aa9576010546002820154600160a060020a039091169063a9059cbb90339060006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b15156109d457600080fd5b6102c65a03f115156109e557600080fd5b5050506040518051905015156109fa57600080fd5b33600160a060020a03166108fc610a1983600001548460010154611653565b9081150290604051600060405180830381858888f193505050501515610a3e57600080fd5b33600160a060020a03167f27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9438360020154610a8185600001548660010154611653565b60405180848152602001838152602001828152602001935050505060405180910390a2610b34565b8054600160a060020a0333169080156108fc0290604051600060405180830381858888f193505050501515610add57600080fd5b33600160a060020a03167f27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9436000846000015460405180848152602001838152602001828152602001935050505060405180910390a25b5b5b50565b43600654111580610b62575060025b60105460a060020a900460ff166003811115610b6057fe5b145b80610b85575060035b60105460a060020a900460ff166003811115610b8357fe5b145b1515610b9057600080fd5b60005433600160a060020a03908116911614610bab57600080fd5b60145460ff1615610bbb57600080fd5b6014805460ff1916600117905560025b60105460a060020a900460ff166003811115610be357fe5b1415610dec57600154601354600160a060020a039091169080156108fc0290604051600060405180830381858888f193505050501515610c2257600080fd5b601054600254600160a060020a039182169163a9059cbb9116610caf836370a082313060006040516020015260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401602060405180830381600087803b1515610c8c57600080fd5b6102c65a03f11515610c9d57600080fd5b50505060405180519050601254611653565b60006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b1515610cfb57600080fd5b6102c65a03f11515610d0c57600080fd5b505050604051805190501515610d2157600080fd5b6013546010547f0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff914391610dc890600160a060020a03166370a082313060006040516020015260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401602060405180830381600087803b1515610c8c57600080fd5b6102c65a03f11515610c9d57600080fd5b50505060405180519050601254611653565b60405180848152602001838152602001828152602001935050505060405180910390a15b5b5b5b565b600f5481565b60095481565b60135481565b60125481565b60005433600160a060020a03908116911614610e2457600080fd5b60005b60105460a060020a900460ff166003811115610e3f57fe5b14610e4957600080fd5b6003546010805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039283161790819055166318160ddd6000604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b1515610eb457600080fd5b6102c65a03f11515610ec557600080fd5b5050506040518051601054909150600160a060020a03166370a082313060006040516020015260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401602060405180830381600087803b1515610f2957600080fd5b6102c65a03f11515610f3a57600080fd5b50505060405180519050141515610f5057600080fd5b601054600160a060020a03166318160ddd6000604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b1515610f9857600080fd5b6102c65a03f11515610fa957600080fd5b505050604051805160045550600b5443016005819055600c5401600655601080546001919074ff0000000000000000000000000000000000000000191660a060020a835b02179055506003547f53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a19043903090600160a060020a0316604051928352600160a060020a039182166020840152166040808301919091526060909101905180910390a15b5b565b60045481565b60116020526000908152604090208054600182015460028301546003909301549192909160ff1684565b60075481565b600054600160a060020a031681565b60005433600160a060020a039081169116146110b457600080fd5b60015b60105460a060020a900460ff1660038111156110cf57fe5b146110d957600080fd5b601080546003919074ff0000000000000000000000000000000000000000191660a060020a835b02179055507f6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf4360405190815260200160405180910390a15b5b565b600a5481565b600f5460001061115157600080fd5b60015b60105460a060020a900460ff16600381111561116c57fe5b1461117657600080fd5b6005544390111561118657600080fd5b600654431061119457600080fd5b60005433600160a060020a039081169116146111af57600080fd5b60015b60105460a060020a900460ff1660038111156111ca57fe5b146111d457600080fd5b601054600160a060020a03166370a082313060006040516020015260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401602060405180830381600087803b151561122d57600080fd5b6102c65a03f1151561123e57600080fd5b50505060405180516012541115905061125657600080fd5b601254600954111561126757600080fd5b601354600754111561127857600080fd5b601080546002919074ff0000000000000000000000000000000000000000191660a060020a835b02179055507ff1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f43600f546012546013546040518085815260200184815260200183815260200182815260200194505050505060405180910390a15b5b5b5b565b600354600160a060020a031681565b600b5481565b60055481565b600254600160a060020a031681565b600d5481565b60006005544310801561135a575060015b60105460a060020a900460ff16600381111561135857fe5b145b151561136557600080fd5b600e543490111561137557600080fd5b50600160a060020a0333166000908152601160205260409020805461139a9034611639565b808255600160a060020a033316907f3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc904390349060405180848152602001838152602001828152602001935050505060405180910390a25b50565b60085481565b60015b60105460a060020a900460ff16600381111561141657fe5b1461142057600080fd5b6005544390111561143057600080fd5b600654431061143e57600080fd5b60005433600160a060020a0390811691161461145957600080fd5b600f541561146657600080fd5b600081901061147457600080fd5b600f8190557f1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4438260405191825260208201526040908101905180910390a15b5b5b50565b600e5481565b60105460a060020a900460ff1681565b436006541115806114f8575060025b60105460a060020a900460ff1660038111156114f657fe5b145b8061151b575060035b60105460a060020a900460ff16600381111561151957fe5b145b151561152657600080fd5b60025b60105460a060020a900460ff16600381111561154157fe5b141561154c57600080fd5b601054600354600454600160a060020a039283169263a9059cbb92169060006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b15156115b557600080fd5b6102c65a03f115156115c657600080fd5b505050604051805190501515610dec57600080fd5b5b5b565b601054600160a060020a031681565b60008082848115156115fc57fe5b0490508091505b5092915050565b6000828202831580611626575082848281151561162357fe5b04145b151561162e57fe5b8091505b5092915050565b60008282018381101561162e57fe5b8091505b5092915050565b60008282111561165f57fe5b508082035b929150505600a165627a7a72305820d1429ab39bb88f55f3bbaf54b438aac1bffe69ba342a18ccc6262aee2ae7ef8e0029",
+  "networks": {
+    "1504054526920": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "TotalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0xa1f5254c23e86e941de2538d27e6a5bec8083d070c0317d96fba94247b9a85c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isInEmergency",
+              "type": "bool"
+            }
+          ],
+          "name": "EmergencyToggleEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x4591b474d6e2068f72907c9dfbc70cd5d181c7fa",
+      "updated_at": 1504057845001
+    },
+    "1504058670532": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "TotalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0xa1f5254c23e86e941de2538d27e6a5bec8083d070c0317d96fba94247b9a85c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isInEmergency",
+              "type": "bool"
+            }
+          ],
+          "name": "EmergencyToggleEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xaddf15211816c615570e6eca91b8025d4b1b0e1f",
+      "updated_at": 1504060982606
+    },
+    "1504061015992": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "TotalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0xa1f5254c23e86e941de2538d27e6a5bec8083d070c0317d96fba94247b9a85c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isInEmergency",
+              "type": "bool"
+            }
+          ],
+          "name": "EmergencyToggleEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x6c39d4fbc6cd69a946b47025b91b5972fa104d89",
+      "updated_at": 1504061275571
+    },
+    "1504067637565": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "TotalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0xa1f5254c23e86e941de2538d27e6a5bec8083d070c0317d96fba94247b9a85c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isInEmergency",
+              "type": "bool"
+            }
+          ],
+          "name": "EmergencyToggleEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x03a1b9da8864c82ab9144130775e1258d969b3a4",
+      "updated_at": 1504067644033
+    },
+    "1504483505434": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "TotalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0xa1f5254c23e86e941de2538d27e6a5bec8083d070c0317d96fba94247b9a85c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isInEmergency",
+              "type": "bool"
+            }
+          ],
+          "name": "EmergencyToggleEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x3c1d7a0e29c6ffaa59a0fd058423e36608f709b3",
+      "updated_at": 1504483510332
+    },
+    "1504484150220": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "TotalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0xa1f5254c23e86e941de2538d27e6a5bec8083d070c0317d96fba94247b9a85c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isInEmergency",
+              "type": "bool"
+            }
+          ],
+          "name": "EmergencyToggleEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xa2c06abedec638880406f11ac0dfc79c7d7d5778",
+      "updated_at": 1504484861013
+    },
+    "1504634181043": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "TotalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0xa1f5254c23e86e941de2538d27e6a5bec8083d070c0317d96fba94247b9a85c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isInEmergency",
+              "type": "bool"
+            }
+          ],
+          "name": "EmergencyToggleEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xe0cef8804f45dd8ece0b468ba4fd15c7ecc723f6",
+      "updated_at": 1504634233049
+    },
+    "1506112529526": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x106c2df0323237fc95e9ae2d26d62128a54b6173",
+      "updated_at": 1506112838982
+    },
+    "1506112861022": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x319538083c40ee9f26e1d9369f2fb86866c1fb14",
+      "updated_at": 1506113322234
+    },
+    "1506113385875": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x106c2df0323237fc95e9ae2d26d62128a54b6173",
+      "updated_at": 1506113536134
+    },
+    "1506129382367": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xac997e08db5c57cba14ea2cc53cb9ef00d149cc9",
+      "updated_at": 1506130007158
+    },
+    "1506147633178": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x106c2df0323237fc95e9ae2d26d62128a54b6173",
+      "updated_at": 1506147680175
+    },
+    "1506213969588": {
+      "events": {
+        "0x53a4ca24dc33c57c64ee27a8ffd4a4165f8cd6575f22ce5306ee8eb5ec71b8a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "contractAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "name": "StartAuctionEvent",
+          "type": "event"
+        },
+        "0x3ab285de9592abec20ba640eee8e649e5e2730a923a79d99d8b54060353ab8bc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "depositInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "DepositEvent",
+          "type": "event"
+        },
+        "0x1ec727bee465e6eb65778795df9b48dec27380ea76c276fc5916a0f86aab6ae4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetStrikePriceEvent",
+          "type": "event"
+        },
+        "0xf9e35c2780cf9e60a16125e7f873e6d2879391c08f888732bfd4b3e2d789c65c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensPurchased",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "purchaseAmountInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "ProcessBidEvent",
+          "type": "event"
+        },
+        "0xf1ff5b9a7040e668da60eec2d1fa6add052c2b454d7822112789e9fc202f0c2f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "strikePriceInWei",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalTokensSold",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            }
+          ],
+          "name": "AuctionSuccessEvent",
+          "type": "event"
+        },
+        "0x27328b13c1d8b12b96415184373dff73a4b8bf9254b3aa0987ccef796bf458b9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buyerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "tokensReceived",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "unspentDepositInWei",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawEvent",
+          "type": "event"
+        },
+        "0x0cb51f610372482158e5aeb0425dcc6733f99a5548fefb4c72a08b133824b5ff": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalWeiRaised",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "totalRemainingTokens",
+              "type": "uint256"
+            }
+          ],
+          "name": "OwnerWithdrawEvent",
+          "type": "event"
+        },
+        "0x6b1678501fdb3c4702da8f795dc5fc3ff6b9beeda4e97daa792f9eb6a4faedbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "CancelAuctionEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xb5a6640acd84bf755711aa7d58d7eee06973dff0",
+      "updated_at": 1506214041589
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1506214041589
+}
