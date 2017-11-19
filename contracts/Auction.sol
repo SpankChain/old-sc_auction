@@ -4,7 +4,11 @@ import {HumanStandardToken} from './HumanStandardToken.sol';
 
 /*
     Two phase auction:
+<<<<<<< HEAD:Auction.sol
     1. purchase phase
+=======
+    1. purchase phase 
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         * begins when startAuction() is executed by owner, ends when process bid phase begins
         * initial and incremental deposits must be equal or greater than the minimum deposit defined at contract deployment
         * buyers submit deposits on-chain
@@ -14,8 +18,13 @@ import {HumanStandardToken} from './HumanStandardToken.sol';
         * strike price must be set before off-chain signed bids can be processed
         * when all bids have been processed, owner can call completeSuccessfulAuction to end auction
         * the auction will fail if success conditions are not met in the time allotted for the auction
+<<<<<<< HEAD:Auction.sol
 
     Auction success conditions (defined at contract deployment) :
+=======
+    
+    Auction success conditions (defined at contract deployment) : 
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         * amount raised is between a minimum and maximum WEI amount
         * tokens sold are between a minimum and maximum number of tokens
 
@@ -38,7 +47,11 @@ import {HumanStandardToken} from './HumanStandardToken.sol';
     * blocks that represent state transitions include the definitional block
     * only one category of inequality operands is used
     * use block number to measure time
+<<<<<<< HEAD:Auction.sol
     * two types of auction state transitions - active & passive
+=======
+    * two types of auction state transitions - active & passive 
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         * active state transitions triggered by contract owner
         * passive state transitions define auction phases as the block height increases
     * inspired by Nick Johnson's auction contract : https://gist.github.com/Arachnid/b9886ef91d5b47c31d2e3c8022eeea27
@@ -112,34 +125,60 @@ contract Auction {
     mapping(address => Buyer) public allBuyers; // mapping of address to buyer (Buyer struct)
     uint public totalTokensSold; // running total of tokens from processed bids
     uint public totalWeiRaised; // running total of WEI raised from processed bids
+<<<<<<< HEAD:Auction.sol
 
+=======
+    
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
     /********
     MODIFIERS
     *********/
     modifier auction_deployed_waiting_to_start {
+<<<<<<< HEAD:Auction.sol
         assert(currentAuctionState == AuctionState.deployed);
+=======
+        require(currentAuctionState == AuctionState.deployed);
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         _;
     }
 
     modifier in_purchase_phase {
+<<<<<<< HEAD:Auction.sol
         assert(block.number < processingPhaseStartBlock && currentAuctionState == AuctionState.started);
+=======
+        require(block.number < processingPhaseStartBlock && currentAuctionState == AuctionState.started);
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         _;
     }
 
     modifier in_processing_phase {
+<<<<<<< HEAD:Auction.sol
         assert(currentAuctionState == AuctionState.started);
         assert(processingPhaseStartBlock <= block.number);
         assert(block.number < auctionEndBlock);
+=======
+        require(currentAuctionState == AuctionState.started);
+        require(processingPhaseStartBlock <= block.number);
+        require(block.number < auctionEndBlock);
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         _;
     }
 
     modifier auction_complete {
+<<<<<<< HEAD:Auction.sol
         assert(auctionEndBlock <= block.number || currentAuctionState == AuctionState.success || currentAuctionState == AuctionState.cancel);
+=======
+        require(auctionEndBlock <= block.number || currentAuctionState == AuctionState.success || currentAuctionState == AuctionState.cancel);
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         _;
     }
 
     modifier strike_price_set {
+<<<<<<< HEAD:Auction.sol
         assert(0 < strikePriceInWei);
+=======
+        require(0 < strikePriceInWei);
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         _;
     }
 
@@ -147,30 +186,40 @@ contract Auction {
         assert(msg.sender == ownerAddress);
         _;
     }
+<<<<<<< HEAD:Auction.sol
 
     /*******************************************************************************************************
     * token parameters :
+=======
+    
+    /*******************************************************************************************************
+    * token parameters : 
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         _tokenAddress : token minting contract address
 
     * wallets :
         _weiWallet : wallet address to transfer WEI after a successful auction
         _tokenWallet : wallet address to transfer remaining tokens after a successful auction
-
+        
     * deposit constraint :
         _minDepositInWei : minimum deposit accepted in WEI (for an initial or incremental deposit)
 
     * auction constraints :
-        a successful auction will raise at least the minimum and at most the maximum number of WEI
+        a successful auction will raise at least the minimum and at most the maximum number of WEI 
         _minWeiToRaise : minimum WEI to raise for a successful auction
         _maxWeiToRaise : maximum WEI to raise for a successful auction
 
         a successful auction will sell at least the minimum and at most the maximum number of tokens
         _minTokensForSale : minimum tokens to sell for a successful auction
         _maxTokensForSale : maximum tokens to sell for a successful auction
-
+    
     * bonus precentage cap :
         _maxTokenBonusPercentage : maximum token percentage bonus that can be applied when processing bids
+<<<<<<< HEAD:Auction.sol
 
+=======
+    
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
     * auction phase constraints :
         _depositWindowInBlocks : defines the length, in blocks, of the purchase phase
         _processingWindowInBlocks : defines the length, in blocks, of the processing phase
@@ -178,6 +227,7 @@ contract Auction {
     function Auction(
         address _tokenAddress, address _weiWallet, address _tokenWallet, uint _minDepositInWei, uint _minWeiToRaise, uint _maxWeiToRaise, uint _minTokensForSale, uint _maxTokensForSale, uint _maxTokenBonusPercentage, uint _depositWindowInBlocks, uint _processingWindowInBlocks) {
 
+<<<<<<< HEAD:Auction.sol
         assert(0 < _minDepositInWei);
         assert(_minDepositInWei <= _minWeiToRaise);
         assert(_minWeiToRaise < _maxWeiToRaise);
@@ -189,6 +239,19 @@ contract Auction {
         ownerAddress = msg.sender;
         tokenAddress = _tokenAddress;
 
+=======
+        require(0 < _minDepositInWei);
+        require(_minDepositInWei <= _minWeiToRaise);
+        require(_minWeiToRaise < _maxWeiToRaise);
+        require(0 < _minTokensForSale);
+        require(_minTokensForSale < _maxTokensForSale);
+        require(0 < _depositWindowInBlocks);
+        require(0 < _processingWindowInBlocks);
+
+        ownerAddress = msg.sender;
+        tokenAddress = _tokenAddress;
+        
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         weiWallet = _weiWallet;
         tokenWallet = _tokenWallet;
 
@@ -208,8 +271,13 @@ contract Auction {
     ***************/
     // buyers can deposit as many time as they want during the purchase phase
     function deposit() in_purchase_phase payable {
+<<<<<<< HEAD:Auction.sol
         assert(minDepositInWei <= msg.value);
 
+=======
+        require(minDepositInWei <= msg.value);
+        
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         Buyer storage buyer = allBuyers[msg.sender];
 		buyer.depositInWei = SafeMath.add(buyer.depositInWei, msg.value);
 
@@ -224,15 +292,25 @@ contract Auction {
     function withdraw() auction_complete {
         Buyer storage buyer = allBuyers[msg.sender];
         require(buyer.hasWithdrawn == false);
+<<<<<<< HEAD:Auction.sol
 
+=======
+        
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         buyer.hasWithdrawn = true;
         require(minDepositInWei <= buyer.depositInWei);
 
         if (currentAuctionState == AuctionState.success) {
             require(token.transfer(msg.sender, buyer.totalTokens));
+<<<<<<< HEAD:Auction.sol
             msg.sender.transfer(SafeMath.sub(buyer.depositInWei, buyer.purchaseAmountInWei));
 
             WithdrawEvent(msg.sender, buyer.totalTokens, SafeMath.sub(buyer.depositInWei, buyer.purchaseAmountInWei));
+=======
+            msg.sender.transfer(SafeMath.sub(buyer.depositInWei, buyer.bidWeiAmount));
+            
+            WithdrawEvent(msg.sender, buyer.totalTokens, SafeMath.sub(buyer.depositInWei, buyer.bidWeiAmount));
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         } else {
             msg.sender.transfer(buyer.depositInWei);
 
@@ -249,7 +327,11 @@ contract Auction {
     function startAuction() auction_deployed_waiting_to_start owner_only {
         token = HumanStandardToken(tokenAddress);
         require(token.balanceOf(this) == maxTokensForSale);
+<<<<<<< HEAD:Auction.sol
 
+=======
+        
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         processingPhaseStartBlock = block.number + depositWindowInBlocks;
         auctionEndBlock = processingPhaseStartBlock + processingWindowInBlocks;
         currentAuctionState = AuctionState.started;
@@ -263,7 +345,11 @@ contract Auction {
     function setStrikePrice(uint _strikePriceInWei) in_processing_phase owner_only {
         require(strikePriceInWei == 0);
         require(0 < _strikePriceInWei);
+<<<<<<< HEAD:Auction.sol
 
+=======
+        
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         strikePriceInWei = _strikePriceInWei;
 
         SetStrikePriceEvent(strikePriceInWei);
@@ -283,17 +369,34 @@ contract Auction {
     // after a bid is successfully processed, the total WEI to collect and total tokens to sell are updated
     // check the total funds raised and number of tokens sold are equal or below the maximum auction success conditions
     function processBid(uint tokenBidPriceInWei, uint bidWeiAmount, uint tokenBonusPercentage, uint8 v, bytes32 r, bytes32 s) strike_price_set in_processing_phase owner_only {
+<<<<<<< HEAD:Auction.sol
         assert(minDepositInWei <= bidWeiAmount);
         assert(strikePriceInWei <= tokenBidPriceInWei);
         assert(tokenBidPriceInWei <= bidWeiAmount);
 
         assert(0 <= tokenBonusPercentage);
         assert(tokenBonusPercentage <= maxTokenBonusPercentage);
+=======
+        require(minDepositInWei <= bidWeiAmount);
+        require(strikePriceInWei <= tokenBidPriceInWei);
+        require(tokenBidPriceInWei <= bidWeiAmount);
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
 
         bytes32 bidHash = keccak256(
             keccak256("address contractAddress", "uint256 tokenBidPriceInWei", "uint256 bidWeiAmount"),
             keccak256(this, tokenBidPriceInWei, bidWeiAmount));
 
+<<<<<<< HEAD:Auction.sol
+=======
+        // NON EIP-712
+        bytes32 bidHash = sha3(this, tokenBidPriceInWei, bidWeiAmount);
+        
+        // EIP-712
+        // bytes32 bidHash = keccak256(
+        //     keccak256("address contractAddress", "uint tokenBidPriceInWei", "uint bidWeiAmount"),
+        //     keccak256(this, tokenBidPriceInWei, bidWeiAmount));
+
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         address buyerAddress = ecrecover(bidHash, v, r, s);
 
         uint numTokensPurchased = SafeMath.div(bidWeiAmount, strikePriceInWei);
@@ -312,7 +415,11 @@ contract Auction {
         totalTokensSold = SafeMath.add(buyer.totalTokens, totalTokensSold);
         totalWeiRaised = SafeMath.add(buyer.purchaseAmountInWei, totalWeiRaised);
 
+<<<<<<< HEAD:Auction.sol
         ProcessBidEvent(buyerAddress, buyer.totalTokens, buyer.purchaseAmountInWei);
+=======
+        ProcessBidEvent(buyerAddress, buyer.totalTokens, buyer.bidWeiAmount);
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
     }
 
     // called after bids have been processed to end auction
@@ -321,6 +428,7 @@ contract Auction {
     // checks to see that auction conditions have been met
     // if all conditions are meet, auction state transitions to success
     function completeSuccessfulAuction() strike_price_set in_processing_phase owner_only {
+<<<<<<< HEAD:Auction.sol
         assert(totalTokensSold <= token.balanceOf(this));
         assert(minTokensForSale <= totalTokensSold); // maxTokensForSale check done in processBid
         assert(minWeiToRaise <= totalWeiRaised); // maxWeiToRaise check done in processBid
@@ -341,6 +449,27 @@ contract Auction {
         currentAuctionState = AuctionState.cancel;
         token.transfer(tokenWallet, token.balanceOf(this));
 
+=======
+        require(totalTokensSold <= token.balanceOf(this));
+        require(minTokensForSale <= totalTokensSold); // maxTokensForSale check done in processBid
+        require(minWeiToRaise <= totalWeiRaised); // maxWeiToRaise check done in processBid
+        require(token.transfer(tokenWallet, SafeMath.sub( token.balanceOf(this), totalTokensSold )));
+        
+        weiWallet.transfer(totalWeiRaised);
+        currentAuctionState = AuctionState.success;
+
+        AuctionSuccessEvent(strikePriceInWei, totalTokensSold, totalWeiRaised);
+    }
+
+    // can only be successfully called by owner if the auction is cancellable
+    // causes auction to fail
+    function cancelAuction() owner_only {
+        require(currentAuctionState != AuctionState.success);
+        
+        token.transfer(tokenWallet, token.balanceOf(this));
+        currentAuctionState = AuctionState.cancel;
+        
+>>>>>>> d61b1f821e97757b56fb05feaad72c28fe7d3317:contracts/Auction.sol
         CancelAuctionEvent();
     }
 }

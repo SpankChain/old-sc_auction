@@ -1,0 +1,20 @@
+{
+    "auction": {
+        "weiWallet": "0xc92F8E8E0b6c0a1036C290cEC9C9C3Ad6233ada0",
+        "tokenWallet" : "0x6FD77f00449cAA1d22698b3D92731e186924b76a",
+        "minDepositInWei": 200,
+        "minWeiToRaise" : 300,
+        "maxWeiToRaise": 1000,
+        "minTokensForSale": 10,
+        "maxTokensForSale": 2000,
+        "maxTokenBonusPercentage" : 40,
+        "depositWindowInBlocks": 15,
+        "processingWindowInBlocks": 14
+    },
+    "token": {
+        "totalSupply" : 1000000000,
+        "name": "SPANK",
+        "decimals": 18,
+        "symbol": "SPANK"
+    }
+}
